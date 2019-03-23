@@ -34,7 +34,25 @@ public class PrintingLikeBoss {
     }
 
     public static void xmasTree(int height) {
-        // 40.3
+        int spaces = height - 1; //starting value for spaces in row 1
+        int stars = 1; //starting value for stars in row 1
+        
+        int i = 1;
+        while (i <= height) {
+            printWhitespaces(spaces);
+            printStars(stars); //stars goes to new line when it reaches the end
+            
+            spaces--;
+            stars += 2;
+            i++;
+        }
+        
+        int j = 1;
+        while (j <= 2) {
+            printWhitespaces(height - 2);
+            printStars(3);
+            j++;
+        }
     }
 
     public static void main(String[] args) {
