@@ -23,7 +23,14 @@ public class PrintingLikeBoss {
     }
 
     public static void printTriangle(int size) {
-        // 40.2
+        //Create the method printTriangle(int size) that prints a triangle using 
+        //the methods printWhitespaces and printStars. 
+        int row = 1;
+        while (row <= size) {
+            printWhitespaces(size - row);
+            printStars(row);
+            row++;
+        }
     }
 
     public static void xmasTree(int height) {
